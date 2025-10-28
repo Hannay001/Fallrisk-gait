@@ -1,0 +1,159 @@
+{
+  "numeric": {
+    "age_years": {
+      "seed_mean": 72.01425000000009,
+      "synth_mean": 72.02823199999983,
+      "seed_std": 6.8853991850509235,
+      "synth_std": 6.795417467247526,
+      "score": 0.9933686817606114
+    },
+    "bmi": {
+      "seed_mean": 27.209249999999983,
+      "synth_mean": 27.220267999999788,
+      "seed_std": 3.0259972633001544,
+      "synth_std": 3.026876345042067,
+      "score": 0.9996522772641909
+    },
+    "systolic_bp": {
+      "seed_mean": 134.37285,
+      "synth_mean": 134.34169199999917,
+      "seed_std": 12.83702254720696,
+      "synth_std": 12.825636521324501,
+      "score": 0.9994405775270419
+    },
+    "gait_speed_m_s": {
+      "seed_mean": 1.0291529999999987,
+      "synth_mean": 1.0296161200000036,
+      "seed_std": 0.12683843499113345,
+      "synth_std": 0.13062671348597563,
+      "score": 0.9848416372749925
+    },
+    "stride_length_cm": {
+      "seed_mean": 119.83140000000004,
+      "synth_mean": 119.80159399999977,
+      "seed_std": 7.990126659822109,
+      "synth_std": 7.988270655101829,
+      "score": 0.9997594899783913
+    },
+    "postural_sway_cm": {
+      "seed_mean": 2.2547180000000013,
+      "synth_mean": 2.2534887799999823,
+      "seed_std": 0.6167663426906493,
+      "synth_std": 0.6130385529427351,
+      "score": 0.9967053728537476
+    },
+    "medication_count": {
+      "seed_mean": 4.042,
+      "synth_mean": 4.02864,
+      "seed_std": 1.4588474903155568,
+      "synth_std": 1.4845941365907673,
+      "score": 0.9895230488143987
+    },
+    "chronic_conditions": {
+      "seed_mean": 1.7475,
+      "synth_mean": 1.78408,
+      "seed_std": 1.2797436266690367,
+      "synth_std": 1.2240337224114282,
+      "score": 0.9677676015466226
+    },
+    "dual_task_cost_percent": {
+      "seed_mean": 13.622629999999996,
+      "synth_mean": 13.638818400000032,
+      "seed_std": 5.470272267730375,
+      "synth_std": 5.4329878173820525,
+      "score": 0.9959979121754867
+    },
+    "fear_of_falling_score": {
+      "seed_mean": 13.3635,
+      "synth_mean": 13.3975,
+      "seed_std": 4.491254585302417,
+      "synth_std": 4.486256095008515,
+      "score": 0.9981714091277315
+    },
+    "muscle_strength_score": {
+      "seed_mean": 66.44950000000007,
+      "synth_mean": 66.4719039999996,
+      "seed_std": 6.816797616916617,
+      "synth_std": 6.840767838100046,
+      "score": 0.9980732479561621
+    },
+    "reaction_time_ms": {
+      "seed_mean": 629.7537000000016,
+      "synth_mean": 629.618898000004,
+      "seed_std": 61.2661672239255,
+      "synth_std": 61.35566684720844,
+      "score": 0.9991625560822907
+    },
+    "tug_seconds": {
+      "seed_mean": 11.269583499999989,
+      "synth_mean": 11.502308840000042,
+      "seed_std": 1.6596774135438956,
+      "synth_std": 1.9921273226221912,
+      "score": 0.8895197089524175
+    }
+  },
+  "categorical": {
+    "sex": {
+      "seed_distribution": {
+        "Male": 748,
+        "Female": 1252
+      },
+      "synth_distribution": {
+        "Female": 20725,
+        "Male": 29275
+      },
+      "score": 0.7885
+    },
+    "past_falls_6mo": {
+      "seed_distribution": {
+        "0": 1349,
+        "1": 651
+      },
+      "synth_distribution": {
+        "0": 34108,
+        "2": 3946,
+        "3": 2400,
+        "1": 9546
+      },
+      "score": 0.86542
+    },
+    "assistive_device": {
+      "seed_distribution": {
+        "Walker": 222,
+        "Cane": 278,
+        "None": 1500
+      },
+      "synth_distribution": {
+        "None": 31595,
+        "Walker": 8859,
+        "Cane": 9546
+      },
+      "score": 0.8819
+    },
+    "label_high_fall_risk": {
+      "seed_distribution": {
+        "1": 1026,
+        "0": 974
+      },
+      "synth_distribution": {
+        "0": 23220,
+        "1": 26780
+      },
+      "score": 0.9774
+    },
+    "label_risk_level": {
+      "seed_distribution": {
+        "high": 1026,
+        "low": 447,
+        "moderate": 527
+      },
+      "synth_distribution": {
+        "low": 9310,
+        "high": 26780,
+        "moderate": 13910
+      },
+      "score": 0.9627
+    }
+  },
+  "overall_score": 0.9604390845174494
+}
