@@ -1,0 +1,251 @@
+{
+  "name": "fallrisk_tabular_v1",
+  "primary_key": "participant_id",
+  "label_policy": "multi_feature_v1",
+  "rows": 50000,
+  "fields": {
+    "participant_id": {
+      "type": "string",
+      "description": "Synthetic identifier",
+      "example": "SYN_00001"
+    },
+    "age_years": {
+      "type": "float",
+      "units": "years",
+      "range": [
+        55.0,
+        95.0
+      ]
+    },
+    "sex": {
+      "type": "categorical",
+      "values": [
+        "Female",
+        "Male"
+      ]
+    },
+    "bmi": {
+      "type": "float",
+      "units": "kg/m^2",
+      "range": [
+        17.0,
+        39.9
+      ]
+    },
+    "systolic_bp": {
+      "type": "float",
+      "units": "mmHg",
+      "range": [
+        95.0,
+        193.0
+      ]
+    },
+    "gait_speed_m_s": {
+      "type": "float",
+      "units": "m/s",
+      "range": [
+        0.422,
+        1.683
+      ]
+    },
+    "stride_length_cm": {
+      "type": "float",
+      "units": "cm",
+      "range": [
+        88.1,
+        150.0
+      ]
+    },
+    "postural_sway_cm": {
+      "type": "float",
+      "units": "cm",
+      "range": [
+        0.4,
+        4.859
+      ]
+    },
+    "medication_count": {
+      "type": "integer",
+      "range": [
+        0,
+        11
+      ]
+    },
+    "chronic_conditions": {
+      "type": "integer",
+      "range": [
+        0,
+        7
+      ]
+    },
+    "past_falls_6mo": {
+      "type": "integer",
+      "range": [
+        0,
+        3
+      ]
+    },
+    "assistive_device": {
+      "type": "categorical",
+      "values": [
+        "Cane",
+        "None",
+        "Walker"
+      ]
+    },
+    "dual_task_cost_percent": {
+      "type": "float",
+      "units": "%",
+      "range": [
+        0.0,
+        34.52
+      ]
+    },
+    "fear_of_falling_score": {
+      "type": "integer",
+      "range": [
+        0,
+        28
+      ]
+    },
+    "muscle_strength_score": {
+      "type": "float",
+      "units": "arbitrary score (0-100)",
+      "range": [
+        40.1,
+        94.8
+      ]
+    },
+    "reaction_time_ms": {
+      "type": "float",
+      "units": "ms",
+      "range": [
+        377.7,
+        885.7
+      ]
+    },
+    "tug_seconds": {
+      "type": "float",
+      "units": "seconds",
+      "range": [
+        6.2,
+        18.674
+      ]
+    },
+    "label_high_fall_risk": {
+      "type": "binary",
+      "values": [
+        "0",
+        "1"
+      ]
+    },
+    "label_risk_level": {
+      "type": "categorical",
+      "values": [
+        "high",
+        "low",
+        "moderate"
+      ]
+    }
+  },
+  "percentile_thresholds": {
+    "age_years": {
+      "p10": 63.2,
+      "p25": 67.4,
+      "p50": 72.0,
+      "p75": 76.6,
+      "p90": 80.8
+    },
+    "bmi": {
+      "p10": 23.4,
+      "p25": 25.2,
+      "p50": 27.2,
+      "p75": 29.3,
+      "p90": 31.1
+    },
+    "systolic_bp": {
+      "p10": 117.8,
+      "p25": 125.8,
+      "p50": 134.4,
+      "p75": 143.0,
+      "p90": 150.9
+    },
+    "gait_speed_m_s": {
+      "p10": 0.862,
+      "p25": 0.941,
+      "p50": 1.029,
+      "p75": 1.118,
+      "p90": 1.197
+    },
+    "stride_length_cm": {
+      "p10": 109.5,
+      "p25": 114.4,
+      "p50": 119.8,
+      "p75": 125.2,
+      "p90": 130.0
+    },
+    "postural_sway_cm": {
+      "p10": 1.465,
+      "p25": 1.838,
+      "p50": 2.252,
+      "p75": 2.668,
+      "p90": 3.04
+    },
+    "medication_count": {
+      "p10": 2.0,
+      "p25": 3.0,
+      "p50": 4.0,
+      "p75": 5.0,
+      "p90": 6.0
+    },
+    "chronic_conditions": {
+      "p10": 0.0,
+      "p25": 1.0,
+      "p50": 2.0,
+      "p75": 3.0,
+      "p90": 3.0
+    },
+    "past_falls_6mo": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.0,
+      "p90": 2.0
+    },
+    "dual_task_cost_percent": {
+      "p10": 6.62,
+      "p25": 9.94,
+      "p50": 13.63,
+      "p75": 17.35,
+      "p90": 20.62
+    },
+    "fear_of_falling_score": {
+      "p10": 8.0,
+      "p25": 10.0,
+      "p50": 13.0,
+      "p75": 16.0,
+      "p90": 19.0
+    },
+    "muscle_strength_score": {
+      "p10": 57.8,
+      "p25": 61.9,
+      "p50": 66.5,
+      "p75": 71.1,
+      "p90": 75.3
+    },
+    "reaction_time_ms": {
+      "p10": 551.1,
+      "p25": 588.2,
+      "p50": 629.7,
+      "p75": 670.6,
+      "p90": 708.0
+    },
+    "tug_seconds": {
+      "p10": 9.035,
+      "p25": 10.044,
+      "p50": 11.345,
+      "p75": 12.893,
+      "p90": 14.246
+    }
+  }
+}
