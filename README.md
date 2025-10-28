@@ -1,8 +1,8 @@
 # FallRisk-Gait
 
-**Version 0.2.0 (FallRisk-Gait) succeeds version 0.1.0 (Vitals-Lite-Aging), bringing the gait-focused release online as the next iteration of the synthetic aging portfolio.**
+**FallRisk-Gait v0.2.0 is the direct successor to the Vitals-Lite-Aging v0.1.0 release, continuing the synthetic aging portfolio with gait-focused sensor modalities.**
 
-The FallRisk-Gait dataset provides fully synthetic sensor-derived gait features with paired fall-risk labels for older-adult monitoring scenarios. The release candidate carries an SDMetrics overall quality score of **0.87**, retains the default label policy identifier **`fallrisk_gait_default_v1`**, and remains governed by the synthetic data privacy disclaimer described in the [FallRisk-Gait data card](datasets/fallrisk/DATA_CARD.md) and the planned [v0.2.0 release assets](https://github.com/PLACEHOLDER_ORG/Fallrisk-gait/releases/tag/v0.2.0). These documents outline the simulated sensor protocol, demographic balancing, and residual disclosure risk considerations for downstream users.
+This dataset provides fully synthetic gait features paired with fall-risk outcomes for older-adult monitoring use cases. The release candidate carries an SDMetrics overall score of **0.87**, retains the default label policy identifier **`fallrisk_gait_default_v1`**, and remains governed by the synthetic data privacy disclaimer captured in the [FallRisk-Gait data card](datasets/fallrisk/DATA_CARD.md) and the planned [v0.2.0 release assets](https://github.com/PLACEHOLDER_ORG/Fallrisk-gait/releases/tag/v0.2.0). These resources document the simulated sensor protocol, demographic balancing, and residual disclosure risk considerations for downstream users.
 
 ## Colab notebooks
 
