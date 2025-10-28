@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Fallrisk Gait Dataset"
+message: "If you use this dataset, please cite it using the metadata from this file."
+version: "v0.2.0"
+repository-code: "https://github.com/Fallrisk-gait/Fallrisk-gait"
+authors:
+  - family-names: "Maintainers"
+    given-names: "Fallrisk Gait"
+references:
+  - type: dataset
+    title: "Vitals-Lite-Aging"
+    version: "v0.1.0"
+    url: "https://github.com/Fallrisk-gait/Vitals-Lite-Aging/releases/tag/v0.1.0"
+    notes: "Predecessor dataset to Fallrisk Gait v0.2.0."
