@@ -372,6 +372,109 @@
       "description": "Policy B stand-to-sit 90th percentile cutoff"
     }
   },
+  "policy_thresholds": {
+    "policy_b": {
+      "gait_speed_mps": {
+        "direction": "low",
+        "moderate": {
+          "percentile": 0.25,
+          "cutoff": 0.96
+        },
+        "high": {
+          "percentile": 0.1,
+          "cutoff": 0.886
+        }
+      },
+      "stride_length_m": {
+        "direction": "low",
+        "moderate": {
+          "percentile": 0.25,
+          "cutoff": 1.17
+        },
+        "high": {
+          "percentile": 0.1,
+          "cutoff": 1.12
+        }
+      },
+      "cadence_spm": {
+        "direction": "low",
+        "moderate": {
+          "percentile": 0.25,
+          "cutoff": 104.4
+        },
+        "high": {
+          "percentile": 0.1,
+          "cutoff": 100.7
+        }
+      },
+      "stride_time_var": {
+        "direction": "high",
+        "moderate": {
+          "percentile": 0.75,
+          "cutoff": 0.025
+        },
+        "high": {
+          "percentile": 0.9,
+          "cutoff": 0.03011
+        }
+      },
+      "double_support_pct": {
+        "direction": "high",
+        "moderate": {
+          "percentile": 0.75,
+          "cutoff": 29.77
+        },
+        "high": {
+          "percentile": 0.9,
+          "cutoff": 32.852
+        }
+      },
+      "symmetry_index": {
+        "direction": "high",
+        "moderate": {
+          "percentile": 0.75,
+          "cutoff": 0.084
+        },
+        "high": {
+          "percentile": 0.9,
+          "cutoff": 0.1
+        }
+      },
+      "turn_time_s": {
+        "direction": "high",
+        "moderate": {
+          "percentile": 0.75,
+          "cutoff": 2.605
+        },
+        "high": {
+          "percentile": 0.9,
+          "cutoff": 2.8221
+        }
+      },
+      "sit_to_stand_s": {
+        "direction": "high",
+        "moderate": {
+          "percentile": 0.75,
+          "cutoff": 1.89225
+        },
+        "high": {
+          "percentile": 0.9,
+          "cutoff": 2.0771
+        }
+      },
+      "stand_to_sit_s": {
+        "direction": "high",
+        "moderate": {
+          "percentile": 0.75,
+          "cutoff": 1.792
+        },
+        "high": {
+          "percentile": 0.9,
+          "cutoff": 1.9701
+        }
+      }
+    }
+  },
   "percentile_thresholds": {
     "age_years": {
       "p10": 62.7,
