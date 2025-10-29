@@ -15,454 +15,237 @@
       "range": [
         55.0,
         95.0
-      ],
-      "description": "Participant age at assessment"
+      ]
     },
     "sex": {
       "type": "categorical",
       "values": [
         "Female",
         "Male"
-      ],
-      "description": "Self-reported sex"
+      ]
     },
-    "gait_speed_mps": {
+    "bmi": {
+      "type": "float",
+      "units": "kg/m^2",
+      "range": [
+        17.0,
+        39.9
+      ]
+    },
+    "systolic_bp": {
+      "type": "float",
+      "units": "mmHg",
+      "range": [
+        95.0,
+        193.0
+      ]
+    },
+    "gait_speed_m_s": {
       "type": "float",
       "units": "m/s",
       "range": [
-        0.64,
-        1.55
-      ],
-      "description": "Straight-walk gait speed"
+        0.422,
+        1.683
+      ]
     },
-    "stride_length_m": {
+    "stride_length_cm": {
       "type": "float",
-      "units": "m",
+      "units": "cm",
       "range": [
-        0.939,
-        1.453
-      ],
-      "description": "Average stride length"
+        88.1,
+        150.0
+      ]
     },
-    "cadence_spm": {
+    "postural_sway_cm": {
       "type": "float",
-      "units": "steps/min",
+      "units": "cm",
       "range": [
-        89.3,
-        128.9
-      ],
-      "description": "Step cadence during walk"
+        0.4,
+        4.859
+      ]
     },
-    "stride_time_var": {
-      "type": "float",
-      "units": "s (std dev)",
+    "medication_count": {
+      "type": "integer",
       "range": [
-        0.008,
-        0.05
-      ],
-      "description": "Stride time variability (standard deviation)"
+        0,
+        11
+      ]
     },
-    "double_support_pct": {
-      "type": "float",
-      "units": "% of gait cycle",
+    "chronic_conditions": {
+      "type": "integer",
       "range": [
-        12.0,
-        43.77
-      ],
-      "description": "Fraction of the gait cycle spent in double support"
+        0,
+        7
+      ]
     },
-    "symmetry_index": {
+    "past_falls_6mo": {
+      "type": "integer",
+      "range": [
+        0,
+        3
+      ]
+    },
+    "assistive_device": {
+      "type": "categorical",
+      "values": [
+        "Cane",
+        "None",
+        "Walker"
+      ]
+    },
+    "dual_task_cost_percent": {
       "type": "float",
-      "units": "unitless",
+      "units": "%",
       "range": [
         0.0,
-        0.152
-      ],
-      "description": "Gait symmetry index (higher = more asymmetry)"
+        34.52
+      ]
     },
-    "turn_time_s": {
-      "type": "float",
-      "units": "seconds",
+    "fear_of_falling_score": {
+      "type": "integer",
       "range": [
-        1.2,
-        3.49
-      ],
-      "description": "180° turn segment duration in the TUG"
+        0,
+        28
+      ]
     },
-    "sit_to_stand_s": {
+    "muscle_strength_score": {
       "type": "float",
-      "units": "seconds",
+      "units": "arbitrary score (0-100)",
       "range": [
-        1.2,
-        2.674
-      ],
-      "description": "Sit-to-stand subtask duration"
+        40.1,
+        94.8
+      ]
     },
-    "stand_to_sit_s": {
+    "reaction_time_ms": {
       "type": "float",
-      "units": "seconds",
+      "units": "ms",
       "range": [
-        1.0,
-        2.867
-      ],
-      "description": "Stand-to-sit subtask duration"
+        377.7,
+        885.7
+      ]
     },
     "tug_seconds": {
       "type": "float",
       "units": "seconds",
       "range": [
-        6.002,
-        13.615
-      ],
-      "description": "Timed Up & Go total duration"
-    },
-    "policy_a_risk": {
-      "type": "categorical",
-      "values": [
-        "high",
-        "low",
-        "moderate"
-      ],
-      "description": "Policy A (TUG thresholds) risk bucket"
-    },
-    "policy_b_risk": {
-      "type": "categorical",
-      "values": [
-        "high",
-        "low",
-        "moderate"
-      ],
-      "description": "Policy B (multi-feature) risk bucket"
-    },
-    "fall_risk": {
-      "type": "categorical",
-      "values": [
-        "high",
-        "low",
-        "moderate"
-      ],
-      "description": "Final fall-risk label after combining policies"
+        6.2,
+        18.674
+      ]
     },
     "label_high_fall_risk": {
       "type": "binary",
       "values": [
         "0",
         "1"
-      ],
-      "description": "Binary indicator derived from fall_risk == 'high'"
+      ]
     },
-    "policy_a_trigger": {
+    "label_risk_level": {
       "type": "categorical",
       "values": [
-        "False",
-        "True"
-      ],
-      "description": "Whether Policy A thresholds were exceeded"
-    },
-    "policy_a_threshold_moderate": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        11.0,
-        11.0
-      ],
-      "description": "Policy A moderate-risk TUG cutoff"
-    },
-    "policy_a_threshold_high": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        13.5,
-        13.5
-      ],
-      "description": "Policy A high-risk TUG cutoff"
-    },
-    "policy_b_trigger": {
-      "type": "categorical",
-      "values": [
-        "False",
-        "True"
-      ],
-      "description": "Whether Policy B multi-feature score crossed the trigger"
-    },
-    "policy_b_high_feature_hits": {
-      "type": "string",
-      "description": "Pipe-delimited list of features breaching high-risk percentiles, or 'none'"
-    },
-    "policy_b_moderate_feature_hits": {
-      "type": "string",
-      "description": "Pipe-delimited list of features breaching moderate-risk percentiles, or 'none'"
-    },
-    "policy_b_trigger_count": {
-      "type": "integer",
-      "range": [
-        0,
-        8
-      ],
-      "description": "Number of Policy B features hitting moderate/high thresholds"
-    },
-    "policy_b_score": {
-      "type": "integer",
-      "range": [
-        0,
-        16
-      ],
-      "description": "Policy B score (2 points per high hit, 1 per moderate hit)"
-    },
-    "policy_b_gait_speed_mps_cutoff_p25": {
-      "type": "float",
-      "units": "m/s",
-      "range": [
-        0.96,
-        0.96
-      ],
-      "description": "Policy B gait speed 25th percentile cutoff"
-    },
-    "policy_b_gait_speed_mps_cutoff_p10": {
-      "type": "float",
-      "units": "m/s",
-      "range": [
-        0.886,
-        0.886
-      ],
-      "description": "Policy B gait speed 10th percentile cutoff"
-    },
-    "policy_b_stride_length_m_cutoff_p25": {
-      "type": "float",
-      "units": "m",
-      "range": [
-        1.17,
-        1.17
-      ],
-      "description": "Policy B stride length 25th percentile cutoff"
-    },
-    "policy_b_stride_length_m_cutoff_p10": {
-      "type": "float",
-      "units": "m",
-      "range": [
-        1.12,
-        1.12
-      ],
-      "description": "Policy B stride length 10th percentile cutoff"
-    },
-    "policy_b_cadence_spm_cutoff_p25": {
-      "type": "float",
-      "units": "steps/min",
-      "range": [
-        104.4,
-        104.4
-      ],
-      "description": "Policy B cadence 25th percentile cutoff"
-    },
-    "policy_b_cadence_spm_cutoff_p10": {
-      "type": "float",
-      "units": "steps/min",
-      "range": [
-        100.7,
-        100.7
-      ],
-      "description": "Policy B cadence 10th percentile cutoff"
-    },
-    "policy_b_stride_time_var_cutoff_p75": {
-      "type": "float",
-      "units": "s (std dev)",
-      "range": [
-        0.025,
-        0.025
-      ],
-      "description": "Policy B stride time variability 75th percentile cutoff"
-    },
-    "policy_b_stride_time_var_cutoff_p90": {
-      "type": "float",
-      "units": "s (std dev)",
-      "range": [
-        0.0301,
-        0.0301
-      ],
-      "description": "Policy B stride time variability 90th percentile cutoff"
-    },
-    "policy_b_double_support_pct_cutoff_p75": {
-      "type": "float",
-      "units": "% of gait cycle",
-      "range": [
-        29.77,
-        29.77
-      ],
-      "description": "Policy B double support 75th percentile cutoff"
-    },
-    "policy_b_double_support_pct_cutoff_p90": {
-      "type": "float",
-      "units": "% of gait cycle",
-      "range": [
-        32.852,
-        32.852
-      ],
-      "description": "Policy B double support 90th percentile cutoff"
-    },
-    "policy_b_symmetry_index_cutoff_p75": {
-      "type": "float",
-      "units": "unitless",
-      "range": [
-        0.084,
-        0.084
-      ],
-      "description": "Policy B symmetry index 75th percentile cutoff"
-    },
-    "policy_b_symmetry_index_cutoff_p90": {
-      "type": "float",
-      "units": "unitless",
-      "range": [
-        0.1,
-        0.1
-      ],
-      "description": "Policy B symmetry index 90th percentile cutoff"
-    },
-    "policy_b_turn_time_s_cutoff_p75": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        2.605,
-        2.605
-      ],
-      "description": "Policy B turn time 75th percentile cutoff"
-    },
-    "policy_b_turn_time_s_cutoff_p90": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        2.8221,
-        2.8221
-      ],
-      "description": "Policy B turn time 90th percentile cutoff"
-    },
-    "policy_b_sit_to_stand_s_cutoff_p75": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        1.8922,
-        1.8922
-      ],
-      "description": "Policy B sit-to-stand 75th percentile cutoff"
-    },
-    "policy_b_sit_to_stand_s_cutoff_p90": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        2.0771,
-        2.0771
-      ],
-      "description": "Policy B sit-to-stand 90th percentile cutoff"
-    },
-    "policy_b_stand_to_sit_s_cutoff_p75": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        1.792,
-        1.792
-      ],
-      "description": "Policy B stand-to-sit 75th percentile cutoff"
-    },
-    "policy_b_stand_to_sit_s_cutoff_p90": {
-      "type": "float",
-      "units": "seconds",
-      "range": [
-        1.9701,
-        1.9701
-      ],
-      "description": "Policy B stand-to-sit 90th percentile cutoff"
+        "high",
+        "low",
+        "moderate"
+      ]
     }
   },
   "percentile_thresholds": {
     "age_years": {
-      "p10": 62.7,
-      "p25": 67.0,
+      "p10": 63.2,
+      "p25": 67.4,
       "p50": 72.0,
-      "p75": 76.8,
-      "p90": 80.81
+      "p75": 76.6,
+      "p90": 80.8
     },
-    "gait_speed_mps": {
-      "p10": 0.886,
-      "p25": 0.96,
-      "p50": 1.043,
-      "p75": 1.125,
-      "p90": 1.2021
+    "bmi": {
+      "p10": 23.4,
+      "p25": 25.2,
+      "p50": 27.2,
+      "p75": 29.3,
+      "p90": 31.1
     },
-    "stride_length_m": {
-      "p10": 1.12,
-      "p25": 1.17,
-      "p50": 1.223,
-      "p75": 1.278,
-      "p90": 1.326
+    "systolic_bp": {
+      "p10": 117.8,
+      "p25": 125.8,
+      "p50": 134.4,
+      "p75": 143.0,
+      "p90": 150.9
     },
-    "cadence_spm": {
-      "p10": 100.7,
-      "p25": 104.4,
-      "p50": 108.5,
-      "p75": 112.5,
-      "p90": 116.31
+    "gait_speed_m_s": {
+      "p10": 0.862,
+      "p25": 0.941,
+      "p50": 1.029,
+      "p75": 1.118,
+      "p90": 1.197
     },
-    "stride_time_var": {
-      "p10": 0.0096,
-      "p25": 0.0144,
-      "p50": 0.0198,
-      "p75": 0.025,
-      "p90": 0.03011
+    "stride_length_cm": {
+      "p10": 109.5,
+      "p25": 114.4,
+      "p50": 119.8,
+      "p75": 125.2,
+      "p90": 130.0
     },
-    "double_support_pct": {
-      "p10": 19.779,
-      "p25": 23.155,
-      "p50": 26.38,
-      "p75": 29.77,
-      "p90": 32.852
+    "postural_sway_cm": {
+      "p10": 1.465,
+      "p25": 1.838,
+      "p50": 2.252,
+      "p75": 2.668,
+      "p90": 3.04
     },
-    "symmetry_index": {
-      "p10": 0.035,
-      "p25": 0.05,
-      "p50": 0.0675,
-      "p75": 0.084,
-      "p90": 0.1
+    "medication_count": {
+      "p10": 2.0,
+      "p25": 3.0,
+      "p50": 4.0,
+      "p75": 5.0,
+      "p90": 6.0
     },
-    "turn_time_s": {
-      "p10": 1.9749,
-      "p25": 2.178,
-      "p50": 2.3885,
-      "p75": 2.605,
-      "p90": 2.8221
-    },
-    "sit_to_stand_s": {
-      "p10": 1.2869,
-      "p25": 1.47175,
-      "p50": 1.687,
-      "p75": 1.89225,
-      "p90": 2.0771
-    },
-    "stand_to_sit_s": {
-      "p10": 1.1849,
-      "p25": 1.37575,
-      "p50": 1.577,
-      "p75": 1.792,
-      "p90": 1.9701
-    },
-    "tug_seconds": {
-      "p10": 7.551,
-      "p25": 8.0075,
-      "p50": 8.606,
-      "p75": 9.226,
-      "p90": 9.9245
-    },
-    "policy_b_trigger_count": {
+    "chronic_conditions": {
       "p10": 0.0,
       "p25": 1.0,
       "p50": 2.0,
       "p75": 3.0,
-      "p90": 4.0
+      "p90": 3.0
     },
-    "policy_b_score": {
+    "past_falls_6mo": {
       "p10": 0.0,
-      "p25": 1.0,
-      "p50": 3.0,
-      "p75": 5.0,
-      "p90": 7.0
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.0,
+      "p90": 2.0
+    },
+    "dual_task_cost_percent": {
+      "p10": 6.62,
+      "p25": 9.94,
+      "p50": 13.63,
+      "p75": 17.35,
+      "p90": 20.62
+    },
+    "fear_of_falling_score": {
+      "p10": 8.0,
+      "p25": 10.0,
+      "p50": 13.0,
+      "p75": 16.0,
+      "p90": 19.0
+    },
+    "muscle_strength_score": {
+      "p10": 57.8,
+      "p25": 61.9,
+      "p50": 66.5,
+      "p75": 71.1,
+      "p90": 75.3
+    },
+    "reaction_time_ms": {
+      "p10": 551.1,
+      "p25": 588.2,
+      "p50": 629.7,
+      "p75": 670.6,
+      "p90": 708.0
+    },
+    "tug_seconds": {
+      "p10": 9.035,
+      "p25": 10.044,
+      "p50": 11.345,
+      "p75": 12.893,
+      "p90": 14.246
     }
   }
 }
