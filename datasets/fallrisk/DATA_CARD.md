@@ -39,8 +39,8 @@
 Percentile breakpoints for all numeric fields (p10, p25, p50, p75, p90) are included in `schema.json` under `percentile_thresholds`.
 
 ## Label Policy: `multi_feature_v1`
-1. Compute `tug_seconds` using a linear model of age, BMI, gait speed, sway, dual-task cost, fear of falling, and assistive device status plus Gaussian jitter.
-2. Set `label_high_fall_risk = 1` if **any** of the following hold:
+1. Compute `tug_seconds` using a linear model of age, BMI, gait speed, sway, dual-task cost, fear of falling, and assistive device status plus Gaussian jitter. Cut-points are anchored to clinic guidance that associates Timed Up & Go durations ≥13.5 seconds with heightened fall odds [1,2].
+2. Set `label_high_fall_risk = 1` if **any** of the following hold, mirroring thresholds frequently cited across gait-speed and fall-risk screening studies [1–3].
    - `tug_seconds ≥ 13.5`
    - `gait_speed_m_s < 0.8`
    - `past_falls_6mo ≥ 1`
@@ -80,6 +80,11 @@ Calibration bins for the logistic high-risk model are stored in the baseline not
 - The baseline models are pedagogical and omit regularization, cross-validation, and hyper-parameter tuning—performance numbers should not be interpreted as clinically meaningful.
 - Past falls are capped at three events and do not capture severity or injury context.
 - Without access to `sdv`/`sdmetrics`, the notebooks fall back to minimal implementations; users should install official packages for production studies.
+
+## Future Work
+- Extend the schema to cover wearable inertial measurements (e.g., step symmetry, swing/stance ratios) once validated synthesis recipes ship in the planned v0.3.0 roadmap outlined in the [Unreleased changelog draft](../../CHANGELOG.md#unreleased).
+- Publish calibration-aware baselines that incorporate clinical adjudication feedback gathered during the [v0.2.0 review cycle](../../CHANGELOG.md#v020---2025-10-28).
+- Document fairness diagnostics tied to demographic subgroups using the analysis slots earmarked in [`notebooks/04_baseline_tabular.ipynb`](notebooks/04_baseline_tabular.ipynb).
 
 ## Ethical Considerations
 - The dataset is purely synthetic and should **not** be used to make direct clinical decisions.
