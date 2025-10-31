@@ -4,7 +4,7 @@
 
 This dataset provides fully synthetic gait features paired with fall-risk outcomes for older-adult monitoring use cases. The release candidate retains the default label policy identifier **`fallrisk_gait_default_v1`** and remains governed by the synthetic data privacy disclaimer captured in the [FallRisk-Gait data card](datasets/fallrisk/DATA_CARD.md) and the planned [v0.2.0 release assets](https://github.com/Fallrisk-gait/Fallrisk-gait/releases/tag/v0.2.0). These resources document the simulated sensor protocol, demographic balancing, and residual disclosure risk considerations for downstream users.
 
-SDMetrics QualityReport overall = **0.960** for `fallrisk_tabular_v1.csv` (see [`datasets/fallrisk/reports/quality_report.json`](datasets/fallrisk/reports/quality_report.json)).
+SDMetrics QualityReport overall = **0.960** for `fallrisk_tabular_v1.csv` (summary: [`datasets/fallrisk/reports/quality_report.json`](datasets/fallrisk/reports/quality_report.json); full artifact: [`datasets/fallrisk/reports/quality_report.pkl`](datasets/fallrisk/reports/quality_report.pkl), which is also attached as a Release asset).
 
 ## Colab notebooks
 
