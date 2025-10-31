@@ -37,8 +37,8 @@ SDMetrics QualityReport overall = **0.960** for `fallrisk_tabular_v1.csv` (summa
 
 The SDMetrics run identified a handful of weaker-performing signals to monitor when modeling or distributing derivatives:
 
-- **`stride_length_variability`** – lowest coverage score (0.61) and notable covariance drift versus the synthetic control cohort.
-- **`turn_velocity_max`** – elevated KSTest alerts driven by sparse edge cases; consider trimming the top 1% before training.
-- **`dual_task_recovery_time`** – class-conditional precision under 0.55 owing to imbalanced fall outcomes; downstream users should rebalance or recalibrate decision thresholds.
+- **`label_risk_level`** – lowest column-shape score (~0.89) because the synthetic distribution under-represents the lowest risk categories.
+- **`medication_count` × `chronic_conditions`** – weakest pairwise trend (~0.64) with the synthetic data failing to capture the strong positive correlation seen in the seed cohort.
+- **`age_years` × `chronic_conditions`** – secondary pairwise concern (~0.69) reflecting muted age-driven comorbidity growth among synthetic records.
 
-Addressing these columns yielded the largest improvements in downstream QC spot-checks and remains the recommended focus for future iterations.
+Addressing these columns and pairs yielded the largest improvements in downstream QC spot-checks and remains the recommended focus for future iterations.
