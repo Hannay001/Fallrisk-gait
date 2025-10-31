@@ -12,3 +12,8 @@ references:
     version: "v0.1.0"
     url: "https://github.com/Fallrisk-gait/Vitals-Lite-Aging/releases/tag/v0.1.0"
     notes: "Predecessor dataset to Fallrisk Gait v0.2.0."
+  - type: software
+    title: "Vitals-Lite-Aging"
+    url: "https://github.com/Hannay001/vitals-lite-aging"
+    version: "v0.1.0"
+    notes: "Predecessor dataset; this v0.2.0 release adds the FallRisk-Gait successor pack."
