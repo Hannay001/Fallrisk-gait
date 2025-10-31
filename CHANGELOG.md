@@ -7,15 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v0.2.0] - 2025-10-28
+## [0.2.0] - 2025-10-31
 ### Added
-- FallRisk-Gait dataset packaged for public distribution.
-- Analysis notebooks demonstrating dataset exploration and model training workflows.
-- Quality control (QC) report summarizing validation checks and outcomes.
-- Comprehensive documentation covering study context, data organization, and usage guidance.
+- FallRisk-Gait dataset (tabular, ~50k rows) and sample_1k.csv
+- Notebooks: 01_seed, 02_synthesize, 03_qc, 04_baseline_tabular
+- SDMetrics QualityReport artifacts (pkl + json)
+- DATA_CARD.md, schema.json
 
 ### Changed
-- Overhauled README from the v0.1.0 release to highlight dataset access, notebook workflows, and QC results.
+- README: successor note; Colab badges updated
 
 ## [v0.1.0]
 ### Added
