@@ -13,7 +13,7 @@ def test_files_exist():
 def test_schema_matches_columns():
     df = pd.read_csv(DATA, nrows=200)
     schema = json.load(open(SCHEMA))
-    expected = set(schema["columns"].keys())
+    expected = set(schema["fields"].keys())
     actual = set(df.columns)
     missing = expected - actual
     extra = actual - expected
@@ -21,8 +21,9 @@ def test_schema_matches_columns():
     assert not extra, f"Unexpected columns in CSV: {sorted(extra)}"
 
 def test_label_distribution_not_extreme():
-    df = pd.read_csv(DATA, usecols=["fall_risk"])
-    counts = df["fall_risk"].value_counts(normalize=True)
+    label_column = "label_high_fall_risk"
+    df = pd.read_csv(DATA, usecols=[label_column])
+    counts = df[label_column].value_counts(normalize=True)
     assert counts.min() > 0.01 and counts.max() < 0.98
 
 def test_qc_artifacts_present():
