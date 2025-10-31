@@ -1,0 +1,12 @@
+# Core
+pandas>=2.0,<2.3
+numpy>=1.24,<2.0
+scikit-learn>=1.4,<1.6
+matplotlib>=3.7,<3.10
+
+# Synthesis + QC
+sdv>=1.7,<2.0
+sdmetrics>=0.13,<0.14
+
+# Jupyter (local runs)
+ipykernel>=6.29,<7
