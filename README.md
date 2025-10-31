@@ -10,10 +10,10 @@ SDMetrics QualityReport overall = **0.960** for `fallrisk_tabular_v1.csv` (see [
 
 | Notebook | GitHub | Colab |
 | --- | --- | --- |
-| Seed cohort construction | [datasets/fallrisk/notebooks/01_seed.ipynb](datasets/fallrisk/notebooks/01_seed.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Fallrisk-gait/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/01_seed.ipynb) |
-| Synthetic sampling workflow | [datasets/fallrisk/notebooks/02_synthesize.ipynb](datasets/fallrisk/notebooks/02_synthesize.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Fallrisk-gait/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/02_synthesize.ipynb) |
-| Quality review | [datasets/fallrisk/notebooks/03_qc.ipynb](datasets/fallrisk/notebooks/03_qc.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Fallrisk-gait/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/03_qc.ipynb) |
-| Baseline modeling | [datasets/fallrisk/notebooks/04_baseline_tabular.ipynb](datasets/fallrisk/notebooks/04_baseline_tabular.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Fallrisk-gait/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/04_baseline_tabular.ipynb) |
+| Seed cohort construction | [datasets/fallrisk/notebooks/01_seed.ipynb](datasets/fallrisk/notebooks/01_seed.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/Hannay001/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/01_seed.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a> |
+| Synthetic sampling workflow | [datasets/fallrisk/notebooks/02_synthesize.ipynb](datasets/fallrisk/notebooks/02_synthesize.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/Hannay001/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/02_synthesize.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a> |
+| Quality review | [datasets/fallrisk/notebooks/03_qc.ipynb](datasets/fallrisk/notebooks/03_qc.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/Hannay001/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/03_qc.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a> |
+| Baseline modeling | [datasets/fallrisk/notebooks/04_baseline_tabular.ipynb](datasets/fallrisk/notebooks/04_baseline_tabular.ipynb) | <a target="_blank" href="https://colab.research.google.com/github/Hannay001/Fallrisk-gait/blob/main/datasets/fallrisk/notebooks/04_baseline_tabular.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a> |
 
 ## Quick start
 
