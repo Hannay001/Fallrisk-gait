@@ -60,6 +60,7 @@ public final class SpeechRecognizerService: ObservableObject {
     private var timeoutWorkItem: DispatchWorkItem?
     private var startTask: Task<Void, Never>?
     private var suppressedCancellationTaskIDs: Set<ObjectIdentifier> = []
+    private var isAudioTapInstalled = false
 
     public let timeoutInterval: TimeInterval
 
@@ -76,7 +77,10 @@ public final class SpeechRecognizerService: ObservableObject {
         recognitionTask?.cancel()
         recognitionRequest?.endAudio()
         audioEngine.stop()
-        audioEngine.inputNode.removeTap(onBus: 0)
+        if isAudioTapInstalled {
+            audioEngine.inputNode.removeTap(onBus: 0)
+            isAudioTapInstalled = false
+        }
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }
 
@@ -216,11 +220,15 @@ public final class SpeechRecognizerService: ObservableObject {
 
         let node = audioEngine.inputNode
         let recordingFormat = node.outputFormat(forBus: 0)
-        node.removeTap(onBus: 0)
+        if isAudioTapInstalled {
+            node.removeTap(onBus: 0)
+            isAudioTapInstalled = false
+        }
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { [weak self] buffer, _ in
             guard let self else { return }
             request.append(buffer)
         }
+        isAudioTapInstalled = true
 
         audioEngine.prepare()
         do {
@@ -273,7 +281,10 @@ public final class SpeechRecognizerService: ObservableObject {
         if audioEngine.isRunning {
             audioEngine.stop()
         }
-        audioEngine.inputNode.removeTap(onBus: 0)
+        if isAudioTapInstalled {
+            audioEngine.inputNode.removeTap(onBus: 0)
+            isAudioTapInstalled = false
+        }
         recognitionRequest?.endAudio()
         recognitionTask?.cancel()
         recognitionTask = nil
