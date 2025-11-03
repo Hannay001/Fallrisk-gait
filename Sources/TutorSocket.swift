@@ -532,7 +532,14 @@ public final class TutorSocket: NSObject, ObservableObject {
 
         reconnectTask = Task { [weak self] in
             guard let self else { return }
-            try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+
+            do {
+                try await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+            } catch is CancellationError {
+                return
+            }
+
+            guard !Task.isCancelled else { return }
             await self.performReconnect()
         }
     }
